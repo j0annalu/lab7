@@ -9,5 +9,13 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	// your code here
+	$(".likeBtn").click(likeClick);
+	$(".likeCtr").click(likeClick);
+}
+
+function likeClick(e) { 
+    // prevent the page from reloading      
+    e.preventDefault();
+    //google analytics
+    ga("send","event","like","click");
 }
